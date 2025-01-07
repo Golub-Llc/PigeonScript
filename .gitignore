@@ -1,0 +1,35 @@
+# General
+*~
+*.swp
+*.bak
+*.tmp
+*.pyc
+*.log
+
+# IDEs and Editors
+.vscode/
+
+# Build artifacts
+dist/
+build/
+
+# Testing
+.pytest_cache/
+coverage/
+
+# Documentation
+docs/_build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Package management
+.eggs/
+eggs/
+pip-wheel/
+wheelhouse/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
