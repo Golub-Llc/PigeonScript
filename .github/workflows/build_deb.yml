@@ -1,0 +1,29 @@
+name: Build Debian Package
+
+on:
+  push:
+    branches: [ "main" ] 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-deb devscripts
+
+      - name: Build the Debian package
+        run: |
+          
+          echo "Package: pigeon-script" > DEBIAN/control
+          echo "Version: 0.1-1" >> DEBIAN/control 
+          echo "Architecture: all" >> DEBIAN/control
+          echo "Maintainer: Kowalski <pingvin.kowalski@kocovic.in.rs>" >> DEBIAN/control
+          echo "Description: A revolutionary programming language designed with pigeons in mind." >> DEBIAN/control
+          # ... (add other control file entries) ...
+          # (Create postinst and prerm scripts if needed)
+          dpkg-deb --build .
