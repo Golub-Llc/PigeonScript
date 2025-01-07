@@ -1,0 +1,5 @@
+Package: pigeon-script
+Version: 0.1-1
+Architecture: all
+Maintainer: Kowalski <pingvin.kowalski@kocovic.in.rs> 
+Description: A revolutionary programming language designed with pigeons in mind.
